@@ -14,10 +14,16 @@ def blueGreen(pic):
   
 # make the image square
 def isSquare(pic):
-  
-  x = y
-  newPic = makeEmptyPicture(x, y)
-  for x in range(0, getWidth(pic)):
-    for y in range(0, getHeight(pic)):
-      setColor(getPixel(pic, x, y), 
-    # midterm
+  width = getWidth(pic)
+  height = getHeight(pic)
+  height = width
+  newPic = makeEmptyPicture(width, height)
+  for x in range(0, width):
+    for y in range(0, height):
+      pixel = getPixel(pic, x, y)
+      color = getColor(pixel)
+      setColor(pixel, color)
+      
+  repaint(pic)
+#  show(pic)
+    
